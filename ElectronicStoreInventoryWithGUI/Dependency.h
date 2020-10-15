@@ -3,9 +3,12 @@
 #ifndef _SYSTEMCLASS_H_
 #define _SYSTEMCLASS_H_
 
+#define btn_ID 5000
+
 #define WIN32_LEAN_AND_MEAN
 
 #include <windows.h>
+#include <winuser.h>
 #include "inputclass.h"
 #include "resource.h"
 

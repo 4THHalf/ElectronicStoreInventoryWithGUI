@@ -98,6 +98,7 @@ LRESULT CALLBACK SystemClass::MessageHandler(HWND hwnd, UINT msg, WPARAM wparam,
 
 }
 
+
 void SystemClass::InitializeWindow(int& ScreenWidth, int& ScreenHeight) {
 
 	WNDCLASSEX wc;
@@ -165,6 +166,21 @@ void SystemClass::ShutdownWindow() {
 LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wparam, LPARAM lparam) {
 
 	switch (message) {
+	case WM_CREATE: {CreateWindow(L"BUTTON", L"MAMA MIA",
+		WS_VISIBLE | WS_CHILD,
+		20,
+		50,
+		80,
+		25,
+		hwnd, (HMENU)1, NULL, NULL);
+		break;
+	}
+	case WM_COMMAND: {
+		if (LOWORD(wparam) == 1) {
+			PostQuitMessage(0);
+		}
+		return 0;
+	}
 	case WM_DESTROY: {
 		PostQuitMessage(0);
 		return 0;
