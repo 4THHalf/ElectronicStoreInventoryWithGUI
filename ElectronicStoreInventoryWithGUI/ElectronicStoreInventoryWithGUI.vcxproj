@@ -145,6 +145,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="buttons.h" />
     <ClInclude Include="Dependency.h" />
     <ClInclude Include="inputclass.h" />
     <ClInclude Include="resource.h" />
